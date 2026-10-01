@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGenie - AI Learning Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>🎓 EduGenie</h1>
+        <p>Your AI-Powered Learning Assistant</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>📘 Learn a Topic</h2>
+            <input id="topic" placeholder="Enter a topic, e.g. Python">
+            <select id="level">
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+            </select>
+            <button onclick="learnTopic()">Explain Topic</button>
+            <div id="learnResult" class="result"></div>
+        </section>
+
+        <section class="card">
+            <h2>❓ Ask a Question</h2>
+            <textarea id="question" placeholder="Type your question"></textarea>
+            <button onclick="askQuestion()">Get Answer</button>
+            <div id="answerResult" class="result"></div>
+        </section>
+
+        <section class="card">
+            <h2>📝 Generate Quiz</h2>
+            <input id="quizTopic" placeholder="Enter quiz topic">
+            <select id="quizCount">
+                <option value="5">5 Questions</option>
+                <option value="10">10 Questions</option>
+            </select>
+            <button onclick="generateQuiz()">Generate Quiz</button>
+            <div id="quizResult" class="result"></div>
+        </section>
+
+        <section class="card">
+            <h2>📄 Summarize Content</h2>
+            <textarea id="content" placeholder="Paste your study notes here"></textarea>
+            <button onclick="summarizeContent()">Summarize</button>
+            <div id="summaryResult" class="result"></div>
+        </section>
+
+        <section class="card">
+            <h2>🛤️ Create Learning Path</h2>
+            <input id="goal" placeholder="What do you want to learn?">
+            <select id="pathLevel">
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+            </select>
+            <button onclick="createPath()">Create Learning Path</button>
+            <div id="pathResult" class="result"></div>
+        </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
